@@ -1,8 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import '../App.css';
-import '../index.css';
+import '../styles/App.css';
+import '../styles/index.css';
 
 function NavBar() {
     return (
