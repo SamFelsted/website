@@ -1,11 +1,76 @@
+@font-face {
+  font-family: pixel;
+  src: url(./fonts/dogicapixel.ttf);
+}
+
+text {
+  color: white;
+  align-items: center;
+}
+
 body {
   margin: 0;
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.image-inverted {
+  filter: invert(100%);
+  align-items: center;
+  horiz-align: center;
+  vertical-align: middle;
+}
+
+.profile {
+  position: absolute; /* Position relative to the inner-page container */
+  top: 5vh; /* Align to the top */
+  right: 5vw; /* Align to the right */
+  width: 10vw; /* Responsive width based on viewport */
+  max-width: 170px; /* Limit maximum size */
+  min-width: 50px; /* Prevent it from shrinking too much */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image content fits well */
+  border-style: solid;
+  border-width: 5px;
+}
+
+.navText {
+  color: white;
+  font-size: large;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-items: center;
+  font-family: pixel;
+}
+
+/* Use CSS Grid for centering */
+.full-page {
+  height: 100vh; /* Full viewport height */
+  display: grid; /* Enable Grid */
+  place-items: center; /* Centers content both vertically and horizontally */
+  background-color: #f8f9fa; /* Optional: Background color */
+}
+
+.inner-page {
+  position: relative;
+  height: 80vh; /* Full viewport height */
+  width: 75vw;
+  display: grid; /* Enable Grid */
+  background-color: #f8f9fa; /* Optional: Background color */
+}
+
+/* Style the text */
+.main-text {
+  font-size: 2rem; /* Adjust text size */
+  font-weight: bold; /* Optional: Make it bold */
+  color: black; /* Optional: Text color */
+  height: 1px;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
