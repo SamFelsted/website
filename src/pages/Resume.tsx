@@ -3,6 +3,7 @@ function Resume() {
         <>
             <div className="full-page grid-center">
                 <span className="main-text">RESUME</span>
+
             </div>
         </>
     );
