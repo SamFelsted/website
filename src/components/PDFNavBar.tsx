@@ -17,7 +17,7 @@ const PDFNavBar: React.FC<PDFNavBarProps> = ({ pdfFiles, setSelectedPDF }) => {
                         <PDFButton
                             key={index}
                             fileName={fileName}
-                            onClick={() => setSelectedPDF(`/pdfs/${fileName}`)}
+                            onClick={() => setSelectedPDF(`${fileName}`)}
                         />
                         <br/>
                     </>

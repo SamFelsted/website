@@ -13,7 +13,7 @@ const PDFButton: React.FC<PDFButtonProps> = ({ fileName, onClick }) => {
             <button onClick={onClick} className="pdf-button">
                 {fileName}
             </button>
-            <Link to={"/pdfs/" + fileName} target="_blank" download className="download-button">Download</Link>
+            <Link to={fileName} target="_blank" download className="download-button">Download</Link>
         </>
     );
 };

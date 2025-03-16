@@ -10,7 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 const PDFViewer: React.FC = () => {
     const [numPages, setNumPages] = useState<number>(0);
     const [pageNumber, setPageNumber] = useState<number>(1);
-    const [selectedPDF, setSelectedPDF] = useState<string>("/pdfs/samfelstedengr100.pdf"); // State for selected PDF
+    const [selectedPDF, setSelectedPDF] = useState<string>("https://samfelsted.github.io/website/pdfs/ECE341_Project_Report.pdf"); // State for selected PDF
     const [scale, setScale] = useState<number>(1); // Scale factor for the PDF viewer
 
     const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
@@ -24,9 +24,9 @@ const PDFViewer: React.FC = () => {
 
     useEffect(() => {
         setPdfFiles([
-            'samfelstedengr100.pdf',
-            'ECE341_Project_Report.pdf',
-            'ECE_271_Design_Project_2.pdf',
+            'https://samfelsted.github.io/website/pdfs/ECE341_Project_Report.pdf',
+            'https://samfelsted.github.io/website/pdfs/ECE_271_Design_Project_2.pdf',
+            'https://samfelsted.github.io/website/pdfs/samfelstedengr100.pdf',
         ]);
     }, []);
 

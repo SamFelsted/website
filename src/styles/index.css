@@ -60,6 +60,8 @@ body {
 .resumeView {
   /* Centering the PDF viewer and scaling it */
   justify-items: center;
+  height: 100vh;
+  margin-top: 10vh;
 }
 
 .pdfBackground {
@@ -83,9 +85,9 @@ body {
 
   .pdfView {
     width: 65vw;
-    margin-top: 2vh;
     padding: 0;        /* Remove any padding to prevent extra space */
   }
+
 
 }
 
