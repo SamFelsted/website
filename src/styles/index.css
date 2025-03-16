@@ -1,10 +1,12 @@
-text {color: white;
+text {
+  color: white;
   align-items: center;
+  font-size: large;
 }
 
 body {
+  background-color: #f8f9fa;
   margin: 0;
-  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -19,32 +21,142 @@ body {
   vertical-align: middle;
 }
 
-.profile {
-  position: absolute; /* Position relative to the inner-page container */
-  top: 5vh; /* Align to the top */
-  right: 5vw; /* Align to the right */
-  width: 10vw; /* Responsive width based on viewport */
-  max-width: 170px; /* Limit maximum size */
-  min-width: 50px; /* Prevent it from shrinking too much */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image content fits well */
-  border-style: solid;
-  border-width: 5px;
+.navbar-nav {
+  display: flex;
+  background-color: black;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  min-height: 50px;
+  max-height: 70px;
+
 }
+
+.publicationLayout {
+  display: flex;
+  height: 100vh;  /* Use full height of the viewport */
+  width: 100vw; /* Allow the layout to expand to full width */
+  margin: 0;
+}
+
+.left-nav {
+  margin-left: 2vw;
+  bottom:0;
+  top: 0;
+  z-index: 10;  /* Ensure the navbar stays above the PDF content */
+}
+
+.pdfView {
+  /* Centering the PDF viewer and scaling it */
+  flex-grow: 0;
+  padding: 0;
+  margin-left: 15vw;
+  margin-top: 1vh;
+  align-self: normal;
+
+}
+
+.resumeView {
+  /* Centering the PDF viewer and scaling it */
+  justify-items: center;
+}
+
+.pdfBackground {
+  outline: 5px solid black;
+  margin-bottom: 20px;
+}
+
+/* Media query for mobile view (adjust the max-width as needed) */
+@media (max-width: 768px) {
+  .publicationLayout {
+    flex-direction: column;  /* Stack the navbar on top of the PDF viewer */
+    height: 100vh;  /* Use full height of the viewport */
+    margin: 0;  /* Remove any margin */
+  }
+
+  .left-nav {
+    align-self: start;
+    margin-left: 14vw;
+    padding: 0;         /* Remove padding for no extra space */
+  }
+
+  .pdfView {
+    width: 65vw;
+    margin-top: 2vh;
+    padding: 0;        /* Remove any padding to prevent extra space */
+  }
+
+}
+
+.pdf-button {
+  border: 2px solid black; /* Black border */
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  padding: 10px 20px; /* Adjust padding for a nice button size */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Show pointer on hover */
+  text-align: center; /* Center text */
+  display: inline-block; /* Keep it inline */
+  min-width: 200px;
+  width: 15vw;
+  overflow: hidden;
+}
+
+.download-button {
+  border: 2px solid black; /* Black border */
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  padding: 10px 20px; /* Adjust padding for a nice button size */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Show pointer on hover */
+  text-align: center; /* Center text */
+  width: 4vw;
+  min-width: 70px;
+  margin-top: 5px;
+  overflow: hidden;
+  display: flex; /* Keep it inline */
+}
+
+.download-button:hover {
+  background-color: black;
+  color: white; /* Invert colors on hover */
+}
+
+.pdf-button:hover {
+  background-color: black;
+  color: white; /* Invert colors on hover */
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Optional, for spacing between buttons */
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 
 .navText {
   color: white;
-  font-size: large;
-  margin-right: 20px;
+  text-decoration: none;
+  horiz-align: center;
+  font-size: clamp(10px, 5vw, 25px);
+  margin-right: 10px;
   margin-left: 20px;
   align-items: center;
+  vertical-align: center;
 }
 
 /* Use CSS Grid for centering */
 .full-page {
   height: 100vh; /* Full viewport height */
-  display: grid; /* Enable Grid */
+  display: flex; /* Enable Grid */
   place-items: center; /* Centers content both vertically and horizontally */
+  justify-content: center;
+  align-items: center;
   background-color: #f8f9fa; /* Optional: Background color */
 }
 
@@ -58,10 +170,12 @@ body {
 
 /* Style the text */
 .main-text {
-  font-size: 2rem; /* Adjust text size */
-  font-weight: bold; /* Optional: Make it bold */
+  font-size: 1rem; /* Adjust text size */
+  font-weight: normal; /* Optional: Make it bold */
   color: black; /* Optional: Text color */
   height: 1px;
+  vertical-align: center;
+  text-align: center;
 }
 
 
