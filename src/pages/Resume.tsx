@@ -1,6 +1,5 @@
 import {Document, Page} from "react-pdf";
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 import DownloadButton from "../components/DownloadButton";
 
 function Resume() {
