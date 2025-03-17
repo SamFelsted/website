@@ -1,9 +1,8 @@
-// PDFNavBar.tsx
 import React from 'react';
 import PDFButton from './PDFButton';
 
 interface PDFNavBarProps {
-    pdfFiles: string[]; // List of PDF filenames
+    pdfFiles: { name: string; link: string }[]; // List of PDF filenames and links
     setSelectedPDF: (pdf: string) => void; // Function to update selected PDF
 }
 
@@ -12,12 +11,13 @@ const PDFNavBar: React.FC<PDFNavBarProps> = ({ pdfFiles, setSelectedPDF }) => {
         <div className="sidebar">
             <h2>Works</h2>
             <div className="pdf-buttons">
-                {pdfFiles.map((fileName, index) => (
+                {pdfFiles.map((file, index) => (
                     <>
                         <PDFButton
                             key={index}
-                            fileName={fileName}
-                            onClick={() => setSelectedPDF(`${fileName}`)}
+                            fileName={file.name}
+                            fileLink={file.link}
+                            onClick={() => setSelectedPDF(file.link)}
                         />
                         <br/>
                     </>

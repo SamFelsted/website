@@ -20,13 +20,13 @@ const PDFViewer: React.FC = () => {
     const goToPrevPage = () => setPageNumber((prevPage) => Math.max(prevPage - 1, 1));
     const goToNextPage = () => setPageNumber((prevPage) => Math.min(prevPage + 1, numPages));
 
-    const [pdfFiles, setPdfFiles] = useState<string[]>([]);
+    const [pdfFiles, setPdfFiles] = useState<{ name: string; link: string }[]>([]);
 
     useEffect(() => {
         setPdfFiles([
-            'https://samfelsted.github.io/website/pdfs/ECE341_Project_Report.pdf',
-            'https://samfelsted.github.io/website/pdfs/ECE_271_Design_Project_2.pdf',
-            'https://samfelsted.github.io/website/pdfs/samfelstedengr100.pdf',
+            { name: "ECE 341 Project Report", link: "https://samfelsted.github.io/website/pdfs/ECE341_Project_Report.pdf" },
+            { name: "ECE 271 Design Project 2", link: "https://samfelsted.github.io/website/pdfs/ECE_271_Design_Project_2.pdf" },
+            { name: "ENGR 100 Report", link: "https://samfelsted.github.io/website/pdfs/samfelstedengr100.pdf" },
         ]);
     }, []);
 
@@ -53,7 +53,6 @@ const PDFViewer: React.FC = () => {
             window.removeEventListener("resize", updateScale);
         };
     }, []);
-
 
     return (
         <>

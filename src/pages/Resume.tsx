@@ -1,6 +1,7 @@
 import {Document, Page} from "react-pdf";
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import DownloadButton from "../components/DownloadButton";
 
 function Resume() {
     const [scale, setScale] = useState<number>(1); // Scale factor for the PDF viewer
@@ -38,7 +39,7 @@ function Resume() {
                             <Page pageNumber={1}  scale={scale} />
                         </Document>
                     </div>
-                    <Link to="https://samfelsted.github.io/website/pdfs/resume.pdf" target="_blank" download className="download-button">Download</Link>
+                    <DownloadButton fileName={"resume.pdf"} fileLink={"https://samfelsted.github.io/website/pdfs/resume.pdf"}/>
                 </div>
             </div>
         </>

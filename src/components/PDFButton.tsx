@@ -1,19 +1,21 @@
-// PDFButton.tsx
 import React from 'react';
-import {Link} from "react-router-dom";
+import DownloadButton from "./DownloadButton";
 
 interface PDFButtonProps {
     fileName: string;
+    fileLink: string;
     onClick: () => void;
 }
 
-const PDFButton: React.FC<PDFButtonProps> = ({ fileName, onClick }) => {
+const PDFButton: React.FC<PDFButtonProps> = ({ fileName, fileLink, onClick }) => {
     return (
         <>
-            <button onClick={onClick} className="pdf-button">
-                {fileName}
-            </button>
-            <Link to={fileName} target="_blank" download className="download-button">Download</Link>
+            <div className="button-container">
+                <button onClick={onClick} className="pdf-button">
+                    {fileName}
+                </button>
+                <DownloadButton fileLink={fileLink} fileName={fileName} />
+            </div>
         </>
     );
 };
