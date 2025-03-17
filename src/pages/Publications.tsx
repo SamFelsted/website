@@ -27,6 +27,7 @@ const PDFViewer: React.FC = () => {
             { name: "ECE 341 Project Report", link: "https://samfelsted.github.io/website/pdfs/ECE341_Project_Report.pdf" },
             { name: "ECE 271 Design Project 2", link: "https://samfelsted.github.io/website/pdfs/ECE_271_Design_Project_2.pdf" },
             { name: "ENGR 100 Report", link: "https://samfelsted.github.io/website/pdfs/samfelstedengr100.pdf" },
+            { name: "MeltStakeCommander", link: "https://samfelsted.github.io/website/pdfs/samfelstedengr100.pdf" },
         ]);
     }, []);
 
